@@ -13,11 +13,9 @@ def first_challenge
     }
   }
   contacts.each do |name, stats|
-    if name == "Freddy Mercury"
-      name.each do |stats, data|
-        if data == :favorite_icecream_flavors
-          data.delete_if{|flavor| flavor == 'strawberry'}
-        end
+    name.each do |stats, data|
+      if data == :favorite_icecream_flavors
+        data.delete_if{|flavor| flavor == 'strawberry'}
       end
     end
   end
